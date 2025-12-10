@@ -27,3 +27,5 @@ ENV/
 .vscode/
 *.log
 uvicorn.log
+nul
+CompanyData/
