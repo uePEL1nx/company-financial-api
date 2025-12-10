@@ -8,14 +8,33 @@ Automated testing suite for evaluating candidate API submissions.
 # Install dependencies
 pip install requests
 
-# Run tests against a candidate's API
+# Run functional tests (structure, endpoints, error handling)
 python test_submission.py https://candidate-api-url.com
 
-# Run tests with custom output file
-python test_submission.py https://candidate-api-url.com results.json
+# Run data validation tests (verifies actual data values)
+python test_data_validation.py https://candidate-api-url.com
+
+# Run both for complete evaluation
+python test_submission.py https://candidate-api-url.com && python test_data_validation.py https://candidate-api-url.com
 ```
 
-## What It Tests
+## Two Test Scripts
+
+| Script | Purpose | Output |
+|--------|---------|--------|
+| `test_submission.py` | Functional tests (85 points) | Grade A-F |
+| `test_data_validation.py` | Data accuracy (14 checks) | Pass/Fail |
+
+### Data Validation Tests
+
+Verifies actual data values match source CSV files:
+- Company count (222 expected)
+- Company info (ACN, phone, address, type, SIC)
+- Balance sheet values (formatted string + numeric)
+- People data (names, titles, count)
+- Industry data (codes and descriptions)
+
+## What Functional Tests Cover
 
 ### 1. Documentation (10 points)
 - Swagger UI availability at `/docs`
