@@ -565,6 +565,18 @@ uvicorn app.main:app --reload --log-level debug
 
 ---
 
+## Related Documentation
+
+| Document | Location | Purpose |
+|----------|----------|---------|
+| Project Documentation | `docs/PROJECT_DOCUMENTATION.md` | Full technical reference (this file) |
+| Data Dictionary | `docs/DATA_DICTIONARY.md` | All fields and data types |
+| Testing & Evaluation | `docs/TESTING_AND_EVALUATION.md` | Candidate evaluation guide |
+| Candidate Brief | `CANDIDATE_BRIEF.md` | Assessment instructions for candidates |
+| Test Suite README | `testing/README.md` | Quick test reference |
+
+---
+
 ## Contact & Support
 
 **Repository**: https://github.com/uePEL1nx/company-financial-api
